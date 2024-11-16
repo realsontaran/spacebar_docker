@@ -85,7 +85,7 @@ jobs:
           amend: true
 
   build-arm64:
-    runs-on: [self-hosted, arm64]
+    runs-on: blacksmith-2vcpu-ubuntu-2204-arm
     if: ${{ inputs.arm }}
     steps:
       - uses: actions/checkout@v4
