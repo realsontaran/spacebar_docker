@@ -105,7 +105,7 @@ jobs:
           platforms: linux/arm64
           file: Dockerfile
           push: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.push) }}
-          tags: spacebarchat/server:latest-sqlite-arm64
+          tags: sontaran/spacebar:latest-sqlite-arm64
           provenance: false
       - name: Build and push with PostgresSQL ARM64
         if: ${{ inputs.postgresql }}
@@ -115,5 +115,5 @@ jobs:
           platforms: linux/arm64
           file: Dockerfile-prod
           push: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.push) }}
-          tags: spacebarchat/server:latest-postgressql-arm64
+          tags: sontaran/spacebar:latest-postgressql-arm64
           provenance: false
